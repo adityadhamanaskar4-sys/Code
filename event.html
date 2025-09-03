@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DJS ISACA</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="event.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="backgroundImage">
+        </div>
+        <div class="header">
+            <a href="about.html">
+                <button class="headingButton">
+                    <span class="headingText">About</span>
+                </button>
+            </a>
+            <a href="gallery.html">
+                <button class="headingButton">
+                    <span class="headingText">Gallery</span>
+                </button>
+            </a>
+            <a href="DJSISACA.html">
+                <img src="images/logo.png" alt="Avatar" class="logo">
+            </a>
+            <button class="headingButton">
+                <span class="headingText">Event</span>
+            </button>
+            <a href="team.html">
+                <button class="headingButton">
+                    <span class="headingText">Team</span>
+                </button>
+            </a>
+        </div>
+        <div class="content">
+            <section id="events">
+                <h1 class="section-title">Our Events</h1>
+                <div class="events">
+                </div>
+            </section>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("keydown", (e) => {
+            if (e.key === '.')
+                document.body.classList.toggle("light-mode");
+        });
+        let eventHTML='';
+        [{
+            image:'images/events/event1.jpg',
+            title:'CyberHack 2024',
+            desc:'A thrilling 24-hour hackathon focused on cybersecurity challenges and Capture the Flag (CTF).'
+        },
+        {
+            image:'images/events/event2.jpg',
+            title:'Blockchain Summit',
+            desc:'An immersive workshop exploring blockchain applications and security concerns'
+        },
+        {
+            image:'images/events/event3.jpg',
+            title:'IoT Secure',
+            desc:'A hands-on event showcasing how to build secure IoT devices and networks.'
+        }].map((event)=>{
+            eventHTML+=`<div class="event">
+                            <img src=${event.image} alt="Event 1 Logo">
+                            <div class="event-desc">
+                                <h2>${event.title}</h2>
+                                <p>${event.desc}</p>
+                            </div>
+                        </div>`
+        })
+        document.querySelector('.events').innerHTML=eventHTML;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DJS ISACA</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="team.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="backgroundImage">
+        </div>
+        <div class="header">
+            <a href="about.html">
+                <button class="headingButton">
+                    <span class="headingText">About</span>
+                </button>
+            </a>
+            <a href="gallery.html">
+                <button class="headingButton">
+                    <span class="headingText">Gallery</span>
+                </button>
+            </a>
+            <a href="DJSISACA.html">
+                <img src="images/logo.png" alt="Avatar" class="logo">
+            </a>
+            <a href="event.html">
+                <button class="headingButton">
+                    <span class="headingText">Event</span>
+                </button>
+            </a>
+            <button class="headingButton">
+                <span class="headingText">Team</span>
+            </button>
+        </div>
+        <div class="content">
+            <div class="team">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        document.addEventListener("keydown", (e) => {
+            if (e.key === '.')
+                document.body.classList.toggle("light-mode");
+        });
+        let teamHTML = '';
+        [{
+            src: 'images/team/Member1.png',
+            name: 'XYZ',
+            pos: 'Chairperson'
+        }, {
+            src: 'images/team/Member2.png',
+            name: 'XYZ',
+            pos: 'Vicechairperson'
+        }, {
+            src: 'images/team/Member3.png',
+            name: 'XYZ',
+            pos: 'Treasurer'
+        }, {
+            src: 'images/team/Member4.png',
+            name: 'XYZ',
+            pos: 'Mentor'
+        }, {
+            src: 'images/team/Member5.png',
+            name: 'XYZ',
+            pos: 'Tech'
+        }, {
+            src: 'images/team/Member6.png',
+            name: 'XYZ',
+            pos: 'Marketing'
+        },].map((bio) => {
+            teamHTML += `
+                <div class="profile">
+                    <img src=${bio.src}>
+                    <div class="desc">
+                        <h2>${bio.pos}</h2>
+                        <h2>${bio.name}</h2>
+                    </div>
+                </div>
+            `
+        })
+        document.querySelector('.team').innerHTML = teamHTML;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+.light-mode .pane1,
+.light-mode .pane2,
+.light-mode .pane3 {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+.partners {
+    display: inline;
+    margin: 10px;
+    width: 180px;
+    height: 70px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.partners:hover {
+    height: 80px;
+    width: auto;
+}
+
+.pane1 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 500px;
+    background: rgba(0, 0, 0, 0.7);
+    color: rgb(219, 219, 219);
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: 900px;
+}
+
+.pane2 {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: rgb(219, 219, 219);
+    padding: 20px;
+    margin-top: 20px;
+    margin-right: 700px;
+    width: 700px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 30px;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.pane3 {
+    justify-content: center;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: rgb(219, 219, 219);
+    padding: 20px;
+    margin-top: 200px;
+    margin-left: 900px;
+    width: 450px;
+    height: 350px;
+    border-radius: 30px;
+    overflow: scroll;
+    scrollbar-width: none;
+}
