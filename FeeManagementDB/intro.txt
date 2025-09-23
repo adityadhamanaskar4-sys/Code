@@ -1,1 +1,1 @@
-
+This project is made using Java swings for GUI, MySQL(MariaDB) for storing data,JDBC for connectivity,Core Java for processing data.
